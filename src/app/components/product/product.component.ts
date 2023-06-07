@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/models/product';
+import { ProductResponseModel } from 'src/app/models/productResponseModel';
 
 @Component({
   selector: 'app-product',
@@ -6,16 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  product1 = { productId: 1, productName: "Bardak", categoryId: 1, unitPrice: 5 }
-  product2 = { productId: 1, productName: "Suluk", categoryId: 1, unitPrice: 5 }
-  product3 = { productId: 1, productName: "Yatak", categoryId: 1, unitPrice: 5 }
-  product4 = { productId: 1, productName: "Cam", categoryId: 1, unitPrice: 5 }
-  product5 = { productId: 1, productName: "Sucuk", categoryId: 1, unitPrice: 5 }
 
-  products = [this.product1, this.product2, this.product3, this.product4, this.product5]
+  products:Product[] = []
+// productResponseModel:ProductResponseModel={}
 
   constructor() { }
   ngOnInit(): void {
-
+console.log("init çalıştı");
   }
 }

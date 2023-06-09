@@ -1,0 +1,31 @@
+<div class="dropdown" *ngIf="cartItems">
+  <button
+    class="btn btn-secondary dropdown-toggle"
+    type="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    Sepetiniz
+  </button>
+  <ul class="dropdown-menu">
+    <li *ngFor="let cartItem of cartItems">
+      <a class="dropdown-item"
+        ><span class="badge bg-secondary">{{ cartItem.quantity }}</span
+        >{{ cartItem.product.productName
+        }}<span class="badge bg-danger" (click)="removeFromCart(cartItem.product)">Sil</span></a
+      >
+    </li>
+    <li><hr class="dropdown-divider" /></li>
+    <li><a class="dropdown-item">Sepete Git</a></li>
+  </ul>
+</div>
+
+
+
+<li *ngFor="let cartItem of cartItems">
+    <a class="dropdown-item"
+      ><span class="badge bg-secondary">{{ cartItem.quantity }}</span
+      >{{ cartItem.product.productName
+      }}<span class="badge bg-danger" (click)="removeFromCart(cartItem.product)">Sil</span></a
+    >
+  </li>

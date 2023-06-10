@@ -1,6 +1,6 @@
 <div class="dropdown" *ngIf="cartItems">
   <button
-    class="btn btn-secondary dropdown-toggle"
+    class="btn  dropdown-toggle"
     type="button"
     data-bs-toggle="dropdown"
     aria-expanded="false"
@@ -22,10 +22,10 @@
 
 
 
-<li *ngFor="let cartItem of cartItems">
+<!-- <li *ngFor="let cartItem of cartItems">
     <a class="dropdown-item"
       ><span class="badge bg-secondary">{{ cartItem.quantity }}</span
       >{{ cartItem.product.productName
       }}<span class="badge bg-danger" (click)="removeFromCart(cartItem.product)">Sil</span></a
     >
-  </li>
+  </li> -->

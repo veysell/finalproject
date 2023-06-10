@@ -31,8 +31,15 @@ add(){
   if(this.productAddForm.valid){
     let productModel=Object.assign({},this.productAddForm.value);
     this.productService.add(productModel).subscribe(data=>{
-      console.log(data);
-      this.toastrService.success("Ürün Eklendi","Başarılı");
+      
+      this.toastrService.success(data.message,"Başarılı");
+    },dataError=>{
+      if(dataError.error.Errors.length>0){
+        for(let i =0; i<dataError.error.Errors.length;i++){
+          this.toastrService.error(dataError.error.Errors[i].ErrorMessage,"Doğrulama hatası")
+        }
+        
+      }
     });
   }
   else{
